@@ -48,11 +48,20 @@ public class Note {
     this.text = text;
   }
 
-  public Date getCreated() {
-    return created;
+  @NonNull
+  @Override
+  public String toString() {
+    return String.format("[%1$s] %2$s", created, subject);
   }
 
-  public void setCreated(Date created) {
+  public void setCreated(@NonNull Date created) {
     this.created = created;
+  }
+
+  @NonNull
+  public Date getCreated() {
+    return created;
+
+
   }
 }
